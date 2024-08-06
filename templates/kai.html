@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{%load static%}
+{% load static %}
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -902,7 +902,9 @@
                 <div class="card card-round">
                   <div class="card-header">
                     <div class="card-head-row card-tools-still-right">
-                      <h4 class="card-title">Users Geolocation</h4>
+                      {% block content %}
+                      <h4 class="card-title">Welcome</h4>
+                      {% endblock %}
                       <div class="card-tools">
                         <button
                           class="btn btn-icon btn-link btn-primary btn-xs"
@@ -921,109 +923,108 @@
                         </button>
                       </div>
                     </div>
-                    <p class="card-category">
-                      Map of the distribution of users around the world
-                    </p>
+<!--                    <p class="card-category">-->
+<!--                      Map of the distribution of users around the world-->
+<!--                    </p>-->
                   </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="table-responsive table-hover table-sales">
-                          <table class="table">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div class="flag">
-                                    <img
-                                      src=" {% static 'assets/img/flags/id.png' %} "
-                                      alt="indonesia"
-                                    />
-                                  </div>
-                                </td>
-                                <td>Indonesia</td>
-                                <td class="text-end">2.320</td>
-                                <td class="text-end">42.18%</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="flag">
-                                    <img
-                                      src=" {% static 'assets/img/flags/us.png' %} "
-                                      alt="united states"
-                                    />
-                                  </div>
-                                </td>
-                                <td>USA</td>
-                                <td class="text-end">240</td>
-                                <td class="text-end">4.36%</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="flag">
-                                    <img
-                                      src=" {% static 'assets/img/flags/au.png' %} "
-                                      alt="australia"
-                                    />
-                                  </div>
-                                </td>
-                                <td>Australia</td>
-                                <td class="text-end">119</td>
-                                <td class="text-end">2.16%</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="flag">
-                                    <img
-                                      src=" {% static 'assets/img/flags/ru.png' %} "
-                                      alt="russia"
-                                    />
-                                  </div>
-                                </td>
-                                <td>Russia</td>
-                                <td class="text-end">1.081</td>
-                                <td class="text-end">19.65%</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="flag">
-                                    <img
-                                      src=" {% static 'assets/img/flags/cn.png' %} "
-                                      alt="china"
-                                    />
-                                  </div>
-                                </td>
-                                <td>China</td>
-                                <td class="text-end">1.100</td>
-                                <td class="text-end">20%</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="flag">
-                                    <img
-                                      src=" {% static 'assets/img/flags/br.png' %} "
-                                      alt="brazil"
-                                    />
-                                  </div>
-                                </td>
-                                <td>Brasil</td>
-                                <td class="text-end">640</td>
-                                <td class="text-end">11.63%</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="mapcontainer">
-                          <div
-                            id="world-map"
-                            class="w-100"
-                            style="height: 300px"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<!--                  <div class="card-body">-->
+<!--                    <div class="row">-->
+<!--                      <div class="col-md-6">-->
+<!--                        <div class="table-responsive table-hover table-sales">-->
+<!--                          <table class="table">-->
+<!--                            <tbody>-->
+<!--                              <tr>-->
+<!--                                <td>-->
+<!--                                  <div class="flag">-->
+<!--                                    <img-->
+<!--                                                                       alt="indonesia"-->
+<!--                                    />-->
+<!--                                  </div>-->
+<!--                                </td>-->
+<!--                                <td>Indonesia</td>-->
+<!--                                <td class="text-end">2.320</td>-->
+<!--                                <td class="text-end">42.18%</td>-->
+<!--                              </tr>-->
+<!--                              <tr>-->
+<!--                                <td>-->
+<!--                                  <div class="flag">-->
+<!--                                    <img-->
+<!--                                      src="#"-->
+<!--                                      alt="united states"-->
+<!--                                    />-->
+<!--                                  </div>-->
+<!--                                </td>-->
+<!--                                <td>USA</td>-->
+<!--                                <td class="text-end">240</td>-->
+<!--                                <td class="text-end">4.36%</td>-->
+<!--                              </tr>-->
+<!--                              <tr>-->
+<!--                                <td>-->
+<!--                                  <div class="flag">-->
+<!--                                    <img-->
+<!--                                      src="#"-->
+<!--                                      alt="australia"-->
+<!--                                    />-->
+<!--                                  </div>-->
+<!--                                </td>-->
+<!--                                <td>Australia</td>-->
+<!--                                <td class="text-end">119</td>-->
+<!--                                <td class="text-end">2.16%</td>-->
+<!--                              </tr>-->
+<!--                              <tr>-->
+<!--                                <td>-->
+<!--                                  <div class="flag">-->
+<!--                                    <img-->
+<!--                                      src="#"-->
+<!--                                      alt="russia"-->
+<!--                                    />-->
+<!--                                  </div>-->
+<!--                                </td>-->
+<!--                                <td>Russia</td>-->
+<!--                                <td class="text-end">1.081</td>-->
+<!--                                <td class="text-end">19.65%</td>-->
+<!--                              </tr>-->
+<!--                              <tr>-->
+<!--                                <td>-->
+<!--                                  <div class="flag">-->
+<!--                                    <img-->
+<!--                                      src="#"-->
+<!--                                      alt="china"-->
+<!--                                    />-->
+<!--                                  </div>-->
+<!--                                </td>-->
+<!--                                <td>China</td>-->
+<!--                                <td class="text-end">1.100</td>-->
+<!--                                <td class="text-end">20%</td>-->
+<!--                              </tr>-->
+<!--                              <tr>-->
+<!--                                <td>-->
+<!--                                  <div class="flag">-->
+<!--                                    <img-->
+<!--                                      src=" {% "#"-->
+<!--                                      alt="brazil"-->
+<!--                                    />-->
+<!--                                  </div>-->
+<!--                                </td>-->
+<!--                                <td>Brasil</td>-->
+<!--                                <td class="text-end">640</td>-->
+<!--                                <td class="text-end">11.63%</td>-->
+<!--                              </tr>-->
+<!--                            </tbody>-->
+<!--                          </table>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-6">-->
+<!--                        <div class="mapcontainer">-->
+<!--                          <div-->
+<!--                            id="world-map"-->
+<!--                            class="w-100"-->
+<!--                            style="height: 300px"-->
+<!--                          ></div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
                 </div>
               </div>
             </div>
@@ -1062,7 +1063,7 @@
 <!--                      <div class="item-list">-->
 <!--                        <div class="avatar">-->
 <!--                          <img-->
-<!--                            src=" {% static 'assets/img/jm_denis.jpg' %} "-->
+<!--                            src="#"-->
 <!--                            alt="..."-->
 <!--                            class="avatar-img rounded-circle"-->
 <!--                          />-->
@@ -1099,7 +1100,6 @@
 <!--                      <div class="item-list">-->
 <!--                        <div class="avatar">-->
 <!--                          <img-->
-<!--                            src=" {% static 'assets/img/talha.jpg' %} "-->
 <!--                            alt="..."-->
 <!--                            class="avatar-img rounded-circle"-->
 <!--                          />-->
@@ -1118,8 +1118,7 @@
 <!--                      <div class="item-list">-->
 <!--                        <div class="avatar">-->
 <!--                          <img-->
-<!--                            src=" {% static 'assets/img/chadengle.jpg' %} "-->
-<!--                            alt="..."-->
+<!--                        lt="..."-->
 <!--                            class="avatar-img rounded-circle"-->
 <!--                          />-->
 <!--                        </div>-->
