@@ -1,5 +1,9 @@
 {% extends 'kai.html' %}
 {%load crispy_forms_tags %}
 {% block content %}
+<form method = 'POST'>
+    {% csrf_token %}
 {{form|crispy}}
+    <button type="food" class="btn btn_primary">primary</button>
+</form>
 {% endblock %}
